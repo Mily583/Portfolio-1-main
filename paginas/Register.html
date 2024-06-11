@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión en PlayStation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('logo2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0070d1;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button.create-account {
+    background-color: transparent;
+    border: 1px solid #0070d1;
+}
+
+.login-form a {
+    color: #0070d1;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+footer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer a {
+    color: #0070d1;
+    text-decoration: none;
+}
+
+</style>
+<body>
+    <div class="overlay">
+        <div class="login-container">
+            <form class="login-form">
+                <h2>Registrate <br> en Games Anashe</h2>
+                <input type="text" placeholder="ID de inicio de sesión (correo electrónico)" required>
+                <button type="submit">Siguiente</button>
+                <a href="#">Acerca de la cuenta de Games Anashe</a>
+                <a href="#">¿Tienes problemas para iniciar sesión?</a>
+                <button type="button" class="create-account">Crear una cuenta</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <a href="#">Ayuda/Mapa del sitio</a>
+    </footer>
+</body>
+</html>

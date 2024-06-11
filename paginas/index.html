@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Inicio de Sesión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form id="login-form">
+        <div class="login-container">
+            <div class="login-form-container">
+                <div class="login-form">
+                    <div class="top-header">
+                        <span>Tienda de videojuegos</span>
+                        <header>Iniciar Sesión</header>
+                    </div>
+                    <div class="input-field">
+                        <input type="text" id="username" class="input" placeholder="Usuario" required>
+                        <i class="bx bx-user"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="password" class="input" placeholder="Contraseña" required>
+                        <i class="bx bx-lock-alt"></i>
+                    </div>
+                    <div class="input-field">
+                        <input type="submit" class="submit" value="Inicio">
+                    </div>
+                    <div class="bottom">
+                        <div class="left">
+                            <input type="checkbox" id="remember">
+                            <label for="remember"> Recordarme</label>
+                        </div>
+                        <div class="right">
+                            <label><a href="#">¿Olvidaste la contraseña?</a></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="login-image-container">
+                <img src="logo.jpg" alt="Logo" class="login-image">
+            </div>
+        </div>
+    </form>
+
+    <script src="login.js"></script>
+</body>
+
+</html>
