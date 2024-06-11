@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Aventures Of Rodo - PlayStation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .header img {
+            height: 40px;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #111;
+            width: 100%;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .hero img {
+            max-width: 50%;
+            border-radius: 8px;
+        }
+        .content {
+            max-width: 45%;
+        }
+        .content h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .content h2 {
+            margin-top: 0;
+            font-size: 2em;
+        }
+        .price-box {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .price-box p {
+            margin: 10px 0;
+        }
+        .price-box .price {
+            font-size: 2em;
+        }
+        .price-box .old-price {
+            text-decoration: line-through;
+            color: #888;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            background-color: #e31b23;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.5em;
+            margin-top: 20px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #b9181d;
+        }
+        .trial-option {
+            cursor: pointer;
+            color: #fff;
+            text-decoration: underline;
+        }
+        .trial-option:hover {
+            color: #aaa;
+        }
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            margin-top: 40px;
+        }
+        .carousel img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .carousel-item {
+            min-width: 100%;
+            transition: transform 0.5s ease;
+        }
+        .carousel-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .carousel-button {
+            background-color: #555;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .carousel-button:hover {
+            background-color: #888;
+        }
+        .game-info {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .game-info img {
+            max-width: 50%;
+            border-radius: 8px;
+        }
+        .game-info-text {
+            max-width: 50%;
+            padding-left: 20px;
+        }
+        .game-info-text h2 {
+            color: #e31b23;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="playstation-logo.png" alt="PlayStation Logo">
+        </div>
+        <div class="hero">
+            <div class="content">
+                <h1>The Aventures Of Rodo</h1>
+                <p>Sony Interactive Entertainment</p>
+                <p>Disponible para <span style="background-color: #555; padding: 5px 10px; border-radius: 5px;">PS4</span></p>
+                <div class="price-box">
+                    <p class="price">US$28.48 <span class="old-price">US48.19</span></p>
+                    <p>Ahorra un 22%</p>
+                    <p>La oferta finaliza el 30/08/2024 00:48 GMT-6</p>
+                </div>
+                <div class="price-box">
+                    <p>Prueba del juego</p>
+                    <p><span class="trial-option" onclick="toggleTrialDetails()">Suscríbete a PlayStation Plus Deluxe para jugar a la prueba del juego completo durante 7 horas</span></p>
+                    <p id="trial-details" style="display: none;">Incluye acceso completo a todos los modos y funciones del juego por 7 horas.</p>
+                </div>
+                <button class="button" onclick="addToCart()">Agregar al carrito</button>
+                <p>Disponible 27/08/2024</p>
+                <p>1 jugador<br>Versión para PS4<br>Compatible con la función de vibración y el efecto de gatillo (control inalámbrico DualSense)</p>
+                <p>Compatible con Ayuda de juegos Anashe</p>
+            </div>
+            <img src="img13.jpg" alt="Tezzcco">
+        </div>
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="img13.1.jpg" alt="Spider-Man Image 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img13.2.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="">
+            </div>
+            <div class="carousel-item">
+                <img src="" alt="Spider-Man Image 4">
+            </div>
+        </div>
+        <div class="carousel-buttons">
+            <button class="carousel-button" onclick="prevSlide()">Anterior</button>
+            <button class="carousel-button" onclick="nextSlide()">Siguiente</button>
+        </div>
+        <div class="game-info">
+            <img src="img13.jpg" alt="Spider-Man Info Image">
+            <div class="game-info-text">
+                <h2>Información del juego</h2>
+                <h3>La aventuras con el mejor heroe.</h3>
+                <p>Rodo experimenta muchas aventura despues de un largo tiempo y regrasa a su anterior puesto de heroe, solo se usara en PS4.</p>
+                <p>"The Adventures of Rodo" es un juego de plataformas y aventuras que sigue las hazañas de Rodo, un valiente héroe en busca de emocionantes aventuras en un mundo lleno de peligros y maravillas. A través de diversos escenarios, desde junglas hasta desiertos y ruinas antiguas, Rodo enfrenta desafíos, resuelve rompecabezas y descubre secretos mientras busca gloria y diversión. Con gráficos vibrantes, una banda sonora enérgica y una narrativa llena de humor, este juego promete una experiencia emocionante llena de acción y sorpresas.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.carousel-item');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.transform = `translateX(${(i - index) * 100}%)`;
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function addToCart() {
+            alert("Juego agregado al carrito.");
+        }
+
+        function toggleTrialDetails() {
+            var details = document.getElementById('trial-details');
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+            } else {
+                details.style.display = 'none';
+            }
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
